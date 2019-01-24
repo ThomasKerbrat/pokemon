@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import Greetings from './Greetings.js';
 import './App.css';
+
 import { recovery } from './recovery.js';
+import { PokemonList } from './components/PokemonList.js';
 
 class App extends Component {
   constructor(props) {
@@ -19,11 +20,7 @@ class App extends Component {
 
   render() {
     return (
-      <ul>
-        {this.state.pokemons.map(pokemon => (
-          <li>{pokemon.identifier}</li>
-        ))}
-      </ul>
+		<PokemonList pokemons={this.state.pokemons} />
     );
   }
 }
