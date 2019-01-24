@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 
 import { recovery } from './recovery.js';
-import { PokemonList } from './components/PokemonList.js';
+import { SearchablePokemonList } from './components/SearchablePokemonList.js';
 
 class App extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class App extends Component {
 
   render() {
     return (
-		<PokemonList pokemons={this.state.pokemons} />
+		<SearchablePokemonList pokemons={this.state.pokemons} />
     );
   }
 }
